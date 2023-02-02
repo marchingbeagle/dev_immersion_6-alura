@@ -1,0 +1,81 @@
+body {
+  font-family: "JetBrains Mono", monospace;
+  text-align: center;
+  background-image: url("https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Background.png");
+  background-color: #000000;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.converter{
+  margin: auto;
+  width: 25%;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.converterDivs{
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+}
+
+.usdValueInput{
+  background-color: rgb(190, 190, 190);
+  font-size: small;
+  text-align: center;
+  width: auto;
+  margin-bottom: 3%;
+  border: 0px;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.exchangeButton{
+  background-color: gray;
+  font-size: small;
+  color: white;
+  border: 0px;
+  border-radius: 10px;
+  padding: 1px 5px 1px 5px;
+  width: auto;
+
+}
+body > img {
+  margin: 0 10px;
+}
+
+img {
+  max-height: 250px;
+}
