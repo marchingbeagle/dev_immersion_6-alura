@@ -1,0 +1,61 @@
+let playerList = [
+  {
+    nome: "Paulo",
+    vitoria: 0,
+    empate: 0,
+    derrota: 0,
+    pontos: 0,
+  },
+  {
+    nome: "Rafa",
+    vitoria: 0,
+    empate: 0,
+    derrota: 0,
+    pontos: 0,
+  },
+];
+
+let elementTable = document.getElementById("tabelaJogadores");
+
+function clearTable() {
+  elementTable.innerHTML = "";
+}
+
+function printPlayers() {
+  const printPlayersHTML = playerList.forEach((element, index) => {
+    let playerIndex = index;
+    elementTable.innerHTML += `
+      <tr>
+        <td>${element.nome}</td>
+        <td>${element.vitoria}</td>
+        <td>${element.empate}</td>
+        <td>${element.derrota}</td>
+        <td>${element.pontos}</td>
+        <td><button onClick="adicionarVitoria(${playerIndex})">Vitória</button></td>
+        <td><button onClick="adicionarEmpate(${playerIndex})">Empate</button></td>
+        <td><button onClick="adicionarDerrota(${playerIndex})">Derrota</button></td>
+      </tr>
+      `;
+  });
+}
+
+printPlayers();
+
+function adicionarVitoria(element) {
+  clearTable();
+  playerList[element].vitoria++;
+  playerList[element].pontos += 3;
+  printPlayers();
+}
+
+function adicionarEmpate(element) {
+  clearTable();
+  playerList[element].empate++;
+  printPlayers();
+}
+
+function adicionarDerrota(element) {
+  clearTable();
+  playerList[element].derrota++;
+  printPlayers();
+}
