@@ -13,6 +13,27 @@ let playerList = [
     derrota: 0,
     pontos: 0,
   },
+  {
+    nome: "Erik",
+    vitoria: 0,
+    empate: 0,
+    derrota: 0,
+    pontos: 0,
+  },
+  {
+    nome: "Ana",
+    vitoria: 0,
+    empate: 0,
+    derrota: 0,
+    pontos: 0,
+  },
+  {
+    nome: "Joao",
+    vitoria: 0,
+    empate: 0,
+    derrota: 0,
+    pontos: 0,
+  },
 ];
 
 let elementTable = document.getElementById("tabelaJogadores");
@@ -57,5 +78,29 @@ function adicionarEmpate(element) {
 function adicionarDerrota(element) {
   clearTable();
   playerList[element].derrota++;
+  printPlayers();
+}
+
+function addNewPlayer() {
+  let flag = 0;
+  let playerName = document.getElementById("newPlayerName").value;
+
+  playerList.forEach((element) => {
+    if (playerName == element.nome) {
+      alert("Nome ja incluso");
+      flag = 2;
+    }
+  });
+
+  if (flag == 0 && !playerName == "") {
+    playerList.push({
+      nome: playerName,
+      vitoria: 0,
+      empate: 0,
+      derrota: 0,
+      pontos: 0,
+    });
+  }
+  clearTable();
   printPlayers();
 }
