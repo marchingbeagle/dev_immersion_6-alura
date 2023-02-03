@@ -43,8 +43,11 @@ function clearTable() {
 }
 
 function printPlayers() {
-  const printPlayersHTML = playerList.forEach((element, index) => {
+  let playerListSorted = sortPlayers();
+
+  const printPlayersHTML = playerListSorted.forEach((element, index) => {
     let playerIndex = index;
+    console.log(playerListSorted);
     elementTable.innerHTML += `
       <tr>
         <td>${element.nome}</td>
@@ -103,4 +106,17 @@ function addNewPlayer() {
   }
   clearTable();
   printPlayers();
+}
+
+function sortPlayers() {
+  const playerListSorted = playerList.sort((a, b) => {
+    if (a["pontos"] > b["pontos"]) {
+      return -1;
+    }
+    if (a["pontos"] < b["pontos"]) {
+      return 1;
+    }
+    return 0;
+  });
+  return playerListSorted;
 }
