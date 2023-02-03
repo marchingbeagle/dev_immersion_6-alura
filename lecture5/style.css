@@ -55,13 +55,6 @@ header{
   border-radius: 30px;
 }
 
-.addPlayerButton{
-  border-radius: 10px;
-  background-color: rgb(0, 0, 0);
-  font-weight: bold;
-
-}
-
 h1 {
   color: white;
 }
@@ -74,6 +67,8 @@ td {
 }
 
 button {
-  background-color: #002351;
-  color: #f6f6f6;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  font-weight: bold;
 }
